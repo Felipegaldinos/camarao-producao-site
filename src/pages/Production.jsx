@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { stages } from "../data/content";
 import { PageHero, CTA } from "../components";
+import { img } from "../data/content";
+import { stageMedia } from "../data/about";
 
 export function Production() {
   return (
@@ -16,9 +18,15 @@ export function Production() {
         <div className="production-list">
           {stages.map(([slug, title, sub, desc, Icon], i) => (
             <Link key={slug} to={"/producao/" + slug}>
-              <span className="large-number">0{i + 1}</span>
-              <Icon />
-              <div>
+              <img
+                className="production-thumb"
+                src={img(stageMedia[slug].primary)}
+                alt={`Imagem ilustrativa: ${title.toLowerCase()}`}
+                loading="lazy"
+                decoding="async"
+              />
+              <div className="production-card-copy">
+                <span className="mini-label">ETAPA 0{i + 1}</span>
                 <h2>{title}</h2>
                 <p>{desc}</p>
               </div>

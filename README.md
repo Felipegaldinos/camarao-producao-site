@@ -31,4 +31,6 @@ Nome e informações comerciais são demonstrativos. O formulário valida os cam
 
 ## Imagens
 
+Atualização editorial: oito novas imagens de berçário, manejo, beneficiamento, equipe reunida e quatro retratos individuais por função. Pessoas e instalações são fictícias e identificadas como ilustrativas. Arquivos em `public/images`: `hatchery.png`, `feeding.png`, `processing.png`, `team.png`, `manager.png`, `biologist.png`, `technician.png` e `quality.png`. Geração pela ferramenta integrada ImageGen; prompts descrevem fotografia editorial de aquicultura brasileira com luz natural, paleta azul e branca, sem textos nem logotipos. Os retratos representam coordenação de produção, biologia, técnica de cultivo e controle de qualidade.
+
 Geradas pela ferramenta integrada ImageGen, sem imagens de terceiros. Prompts: fotografia aérea editorial de viveiros costeiros brasileiros; fotografia de análise da água em laboratório; fotografia de catálogo de camarão cru inteiro sobre gelo; fotografia de camarão cru sem cabeça com casca; fotografia de camarão cru descascado sem cauda. Todas com luz natural ou suave, paleta fria azul e branca, sem textos, marcas ou logotipos.

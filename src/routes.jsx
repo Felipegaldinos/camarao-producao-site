@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { Production } from "./pages/Production";
 import { Stage } from "./pages/Stage";
@@ -22,7 +23,7 @@ export function AppRoutes() {
       <Route path="/conhecimento/:slug" element={<Article />} />
       <Route path="/contato" element={<Contact />} />
       <Route path="/perguntas-frequentes" element={<Faq />} />
-      <Route path="/sobre" element={<Info pageName="sobre" />} />
+      <Route path="/sobre" element={<About />} />
       <Route path="/qualidade" element={<Info pageName="qualidade" />} />
       <Route
         path="/sustentabilidade"

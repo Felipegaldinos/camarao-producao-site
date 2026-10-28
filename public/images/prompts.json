@@ -1,0 +1,14 @@
+{
+  "tool": "ImageGen integrada",
+  "illustrative": true,
+  "prompts": {
+    "hatchery": "Wide editorial photo of a modern shrimp hatchery with rows of round pale blue nursery tanks, bright white clean indoor facility, water aeration, realistic Brazilian aquaculture setting, no people.",
+    "feeding": "Wide documentary photograph of a Brazilian aquaculture worker in a blue uniform and sun hat, standing on a shrimp pond embankment, checking a feeding tray over blue water, paddlewheel aerators in distance, morning light.",
+    "processing": "Wide documentary photograph inside a clean modern shrimp processing facility, stainless steel sorting tables, raw shrimp on production line, workers wearing white sanitary uniforms caps and gloves, bright blue and white palette, realistic food industry.",
+    "team": "Wide environmental editorial portrait of a diverse team of six Brazilian aquaculture professionals, women and men, blue work uniforms and white laboratory coats, standing naturally beside shrimp nursery tanks, warm confident expressions, coastal farm in background.",
+    "manager": "Individual professional environmental portrait, Brazilian woman around 40, natural curly dark hair, blue work shirt, beside aquaculture ponds, waist up, friendly composed expression, authentic editorial photography.",
+    "biologist": "Individual environmental portrait, Brazilian man around 35 with short dark hair, white laboratory coat over blue shirt, in bright aquaculture laboratory, waist up, friendly natural expression, authentic editorial photography.",
+    "technician": "Individual environmental portrait, Brazilian woman around 30 with brown skin, dark hair tied back, blue work shirt and sun hat held in hand, shrimp farm tanks behind her, waist up, friendly natural expression.",
+    "quality": "Individual environmental portrait, Brazilian man around 45 with medium brown skin, wearing clean white food processing coat and hairnet, modern stainless steel food processing facility softly blurred behind, waist up, friendly natural expression."
+  }
+}

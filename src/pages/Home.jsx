@@ -9,6 +9,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { stages, articles, productData, img } from "../data/content";
+import { stageMedia } from "../data/about";
 import { Eyebrow, Button, ProductCard, ArticleCard, CTA } from "../components";
 
 export function Home() {
@@ -111,6 +112,13 @@ export function Home() {
           <div className="stage-grid">
             {stages.map(([slug, title, sub, desc, Icon], i) => (
               <Link to={"/producao/" + slug} className="stage-card" key={slug}>
+                <img
+                  className="stage-card-photo"
+                  src={img(stageMedia[slug].primary)}
+                  alt={`Imagem ilustrativa de ${title.toLowerCase()}`}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div className="stage-top">
                   <Icon size={29} />
                   <span>0{i + 1}</span>
