@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
-  ArrowRight,
   Waves,
   Droplets,
   Leaf,
@@ -11,42 +10,16 @@ import {
 import { stages, articles, productData, img } from "../data/content";
 import { homeStageImages, productImages, articleImages } from "../data/media";
 import { Eyebrow, Button, ProductCard, ArticleCard, CTA } from "../components";
+import { ImageCarousel } from "../components/ImageCarousel";
+import { heroSlides } from "../data/carousel";
 
 export function Home() {
   return (
     <>
-      <section className="hero">
-        <img
-          loading="lazy"
-          decoding="async"
-          src={img("farm")}
-          alt="Imagem ilustrativa de viveiros de camarão próximos ao litoral"
-        />
-        <div className="hero-shade" />
-        <div className="container hero-content">
-          <Eyebrow light>DA ORIGEM, UM MAR DE POSSIBILIDADES</Eyebrow>
-          <h1>
-            Um universo de cuidado.
-            <br />
-            Uma origem <em>azul.</em>
-          </h1>
-          <p>
-            Conheça a jornada do camarão: da vida que começa na água
-            <br className="desktop" /> à qualidade que chega à sua mesa.
-          </p>
-          <div className="actions">
-            <Button to="/producao">Conheça nossa produção</Button>
-            <Link className="text-link white" to="/produtos">
-              Explore os produtos <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-        <div className="hero-caption">
-          <span>01 / 03</span>
-          <div />
-          <span>DA ÁGUA À MESA, CADA ETAPA IMPORTA</span>
-        </div>
-      </section>
+      <h1 className="visually-hidden">
+        Produção de camarão: do cultivo ao fornecimento
+      </h1>
+      <ImageCarousel slides={heroSlides} />
       <div className="promise">
         <div className="container promise-inner">
           {[

@@ -1,0 +1,10 @@
+{
+  "tool": "ImageGen integrada",
+  "illustrative": true,
+  "prompts": {
+    "hero-nursery": "Panoramic wide landscape editorial photograph of a modern Brazilian shrimp hatchery with rows of large round blue nursery tanks under a bright open white roof, aerated water and clean walkways, two aquaculture technicians in blue uniforms in middle distance. White and ocean blue visual identity, natural daylight, realistic equipment. No text no logos no watermark. Only shrimp aquaculture, no fish. Intended as edge-to-edge website slideshow photograph.",
+    "hero-fieldwork": "Panoramic wide landscape documentary photograph of two Brazilian shrimp farm technicians standing on an embankment taking a sample of juvenile raw shrimp from a small lift net, blue ponds with paddlewheel aerators stretching into distance, clear coastal morning, natural white and blue palette, realistic hands and shrimp. No text no logos no watermark. Intended as edge-to-edge website slideshow photograph.",
+    "hero-shrimp-harvest": "Panoramic wide landscape documentary photograph of a shrimp harvest: a blue net full of clearly recognizable small raw gray shrimp being carefully lifted over clean pond water by gloved aquaculture workers, water droplets frozen in soft morning sunlight, coastal Brazilian farm, blue and white palette. No fish, no other seafood, no text no logos no watermark. Intended as edge-to-edge website slideshow photograph.",
+    "hero-processing-line": "Panoramic wide landscape editorial photograph along a modern shrimp processing line, raw whole gray shrimp prominent on stainless steel sorting tables, workers wearing white hygienic uniforms and blue gloves, bright blue and white clean facility, realistic natural textures, wide perspective. Shrimp only, no fish or other seafood. No text no logos no watermark. Intended as edge-to-edge website slideshow photograph."
+  }
+}

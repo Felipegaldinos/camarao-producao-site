@@ -76,7 +76,7 @@ for (const route of routes) {
 }
 assert.equal(
   placements.size,
-  63,
+  67,
   "Quantidade inesperada de imagens nas páginas",
 );
 if (pending.length && !process.argv.includes("--allow-pending")) {
