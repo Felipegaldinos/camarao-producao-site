@@ -4,6 +4,8 @@ import { productData, img } from "../data/content";
 import { productImages } from "../data/media";
 import { Eyebrow, Button, PageHero } from "../components";
 import { NotFound } from "./NotFound";
+import { productGuide, purchaseChecks } from "../data/productGuide";
+import { Check, Utensils, PackageCheck } from "lucide-react";
 export function Product() {
   const { slug } = useParams();
   const p = productData.find((p) => p.slug === slug);
@@ -38,6 +40,46 @@ export function Product() {
             Solicitar informações
           </Button>
         </div>
+      </section>
+      <section className="pale section">
+        <div className="container product-detail-facts">
+          <article>
+            <Utensils size={28} />
+            <h2>Possibilidades de preparo</h2>
+            <p>{productGuide[slug].preparation}</p>
+          </article>
+          <article>
+            <PackageCheck size={28} />
+            <h2>O que considerar</h2>
+            <p>{productGuide[slug].attention}</p>
+            <p>{productGuide[slug].handling}</p>
+          </article>
+        </div>
+      </section>
+      <section className="container section purchasing-grid">
+        <div>
+          <Eyebrow>ANTES DO PEDIDO</Eyebrow>
+          <h2>
+            Confirme os detalhes
+            <br />
+            da sua escolha.
+          </h2>
+          <p>
+            Esta é uma apresentação demonstrativa. A ficha comercial precisa ser
+            completada com as especificações reais do fornecedor.
+          </p>
+          <Button to={"/contato?produto=" + encodeURIComponent(p.name)}>
+            Consultar ficha e disponibilidade
+          </Button>
+        </div>
+        <ul className="checklist">
+          {purchaseChecks.map((item) => (
+            <li key={item}>
+              <Check size={18} />
+              {item}
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );

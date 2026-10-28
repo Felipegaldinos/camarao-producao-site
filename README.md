@@ -32,9 +32,11 @@ Nome e informações comerciais são demonstrativos. O formulário valida os cam
 
 ## Imagens
 
-O site usa 50 fotografias distintas: nenhuma foto aparece em mais de uma posição, mesmo entre listagens, cards e páginas de detalhe. Pessoas e instalações são fictícias e identificadas como ilustrativas. Os retratos representam coordenação de produção, biologia, técnica de cultivo e controle de qualidade.
+O site usa 52 fotografias distintas: nenhuma foto aparece em mais de uma posição, mesmo entre listagens, cards e páginas de detalhe. Pessoas e instalações são fictícias e identificadas como ilustrativas. Os retratos representam coordenação de produção, biologia, técnica de cultivo e controle de qualidade.
 
-As imagens foram criadas com a ferramenta integrada ImageGen. A coleção inclui viveiros, berçários, análises, manejo, biossegurança, beneficiamento e apresentações comerciais. Os prompts pedem fotografia editorial realista, paleta branca e azul, luz natural, sem marcas nem textos. Os conjuntos de prompts estão em `public/images/prompts.json` e `public/images/unique-prompts.json`.
+As imagens foram criadas com a ferramenta integrada ImageGen. A coleção inclui viveiros, berçários, análises, manejo, biossegurança, beneficiamento e apresentações comerciais. Os prompts pedem fotografia editorial realista, paleta branca e azul, luz natural, sem marcas nem textos. Os conjuntos de prompts estão em `public/images/prompts.json`, `public/images/unique-prompts.json` e `public/images/expanded-prompts.json`.
+
+Produtos inclui filtros, guia de preparo interativo, comparação de apresentações, explicação de classificação e dúvidas frequentes. Qualidade possui componente próprio com percurso interativo, rastreabilidade, orientações sobre rótulo e recebimento e referências da Anvisa. Certificações e dados comerciais permanecem sujeitos à confirmação pela empresa.
 
 Os arquivos usados pelo site estão em `public/images/*.webp`; os PNG originais são preservados localmente em `outputs/image-originals`. Para otimizar novas imagens e verificar todas as páginas:
 

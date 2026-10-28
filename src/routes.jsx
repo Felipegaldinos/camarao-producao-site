@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Production } from "./pages/Production";
 import { Stage } from "./pages/Stage";
 import { Products } from "./pages/Products";
+import { Quality } from "./pages/Quality";
 import { Product } from "./pages/Product";
 import { Knowledge } from "./pages/Knowledge";
 import { Article } from "./pages/Article";
@@ -24,7 +25,7 @@ export function AppRoutes() {
       <Route path="/contato" element={<Contact />} />
       <Route path="/perguntas-frequentes" element={<Faq />} />
       <Route path="/sobre" element={<About />} />
-      <Route path="/qualidade" element={<Info pageName="qualidade" />} />
+      <Route path="/qualidade" element={<Quality />} />
       <Route
         path="/sustentabilidade"
         element={<Info pageName="sustentabilidade" />}

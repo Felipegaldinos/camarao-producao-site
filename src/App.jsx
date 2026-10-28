@@ -7,7 +7,13 @@ import { AppRoutes } from "./routes";
 export default function App() {
   const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.hash) {
+      document
+        .getElementById(location.hash.slice(1))
+        ?.scrollIntoView({ block: "start" });
+    } else {
+      window.scrollTo(0, 0);
+    }
     document.title =
       "Origem Azul — " +
       (location.pathname === "/"
