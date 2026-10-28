@@ -32,7 +32,7 @@ Nome e informações comerciais são demonstrativos. O formulário valida os cam
 
 ## Imagens
 
-O site usa 52 fotografias distintas: nenhuma foto aparece em mais de uma posição, mesmo entre listagens, cards e páginas de detalhe. Pessoas e instalações são fictícias e identificadas como ilustrativas. Os retratos representam coordenação de produção, biologia, técnica de cultivo e controle de qualidade.
+O site usa 63 fotografias distintas: nenhuma foto aparece em mais de uma posição, mesmo entre listagens, cards e páginas de detalhe. Pessoas e instalações são fictícias e identificadas como ilustrativas. Os retratos representam coordenação de produção, biologia, técnica de cultivo e controle de qualidade.
 
 As imagens foram criadas com a ferramenta integrada ImageGen. A coleção inclui viveiros, berçários, análises, manejo, biossegurança, beneficiamento e apresentações comerciais. Os prompts pedem fotografia editorial realista, paleta branca e azul, luz natural, sem marcas nem textos. Os conjuntos de prompts estão em `public/images/prompts.json`, `public/images/unique-prompts.json` e `public/images/expanded-prompts.json`.
 
@@ -48,3 +48,5 @@ npm run check:images
 A verificação renderiza as 23 rotas, confirma que cada arquivo existe e compara os conteúdos para detectar a mesma imagem salva com nomes diferentes.
 
 Geradas pela ferramenta integrada ImageGen, sem imagens de terceiros. Prompts: fotografia aérea editorial de viveiros costeiros brasileiros; fotografia de análise da água em laboratório; fotografia de catálogo de camarão cru inteiro sobre gelo; fotografia de camarão cru sem cabeça com casca; fotografia de camarão cru descascado sem cauda. Todas com luz natural ou suave, paleta fria azul e branca, sem textos, marcas ou logotipos.
+
+A direção visual de Produtos e Qualidade usa aberturas fotográficas, cards de processo e fotos amplas entre os conteúdos. Comparativo e checklist de rótulo ficam em seções recolhíveis. As duas páginas têm oito fotografias exclusivas cada, seguindo a referência visual fornecida pelo usuário.

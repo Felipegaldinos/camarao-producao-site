@@ -10,7 +10,10 @@ export function PreparationGuide() {
   const product = productData.find((item) => item.slug === option.product);
   return (
     <div className="preparation-guide">
-      <div className="choice-buttons" aria-label="Escolha seu tipo de preparo">
+      <div
+        className="choice-buttons"
+        aria-label="Escolha seu perfil de fornecimento"
+      >
         {preparations.map((item) => (
           <button
             key={item.id}
@@ -23,7 +26,9 @@ export function PreparationGuide() {
         ))}
       </div>
       <div className="preparation-result" aria-live="polite">
-        <span className="mini-label">UMA POSSIBILIDADE PARA O SEU PREPARO</span>
+        <span className="mini-label">
+          UMA APRESENTAÇÃO PARA O SEU FORNECIMENTO
+        </span>
         <h3>{option.title}</h3>
         <p>{option.text}</p>
         <div className="recommendation">

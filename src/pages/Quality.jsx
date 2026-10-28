@@ -8,32 +8,38 @@ import {
   PackageCheck,
   ArrowUpRight,
   Check,
+  ChevronDown,
 } from "lucide-react";
 import { PageHero, Eyebrow, Button, CTA } from "../components";
 import { EditorialImage } from "../components/EditorialImage";
 import { QualityJourney } from "../components/QualityJourney";
 import { QuestionList } from "../components/QuestionList";
 import { qualityQuestions } from "../data/quality";
+import { img } from "../data/content";
 
 const pillars = [
   {
     Icon: Droplets,
     title: "Ambiente e manejo",
+    image: "quality-water-card",
     text: "Acompanhamento das condições da água, da alimentação e do desenvolvimento ao longo do cultivo.",
   },
   {
     Icon: ShieldCheck,
     title: "Higiene e prevenção",
+    image: "quality-hygiene-card",
     text: "Organização de pessoas, equipamentos e rotinas para reduzir riscos nos processos.",
   },
   {
     Icon: Snowflake,
     title: "Conservação",
+    image: "quality-temperature-card-v2",
     text: "Cuidados com o armazenamento e o transporte, conforme as especificações de cada produto.",
   },
   {
     Icon: ScanLine,
     title: "Identificação",
+    image: "quality-batch-card",
     text: "Conexão entre o lote, os registros de produção e o destino do produto.",
   },
 ];
@@ -53,6 +59,8 @@ export function Quality() {
         tag="QUALIDADE E RASTREABILIDADE"
         title="Qualidade é cuidado que continua."
         description="Da origem ao recebimento, conheça os controles e as informações que ajudam a acompanhar o caminho do camarão."
+        visualImage="quality-banner"
+        imageAlt="Imagem ilustrativa de inspeção de camarões em uma bandeja de controle de qualidade"
       />
       <div className="container page-subnav">
         <a href="#cuidados">Pilares de cuidado</a>
@@ -76,11 +84,20 @@ export function Quality() {
         </p>
       </section>
       <section className="container quality-pillars">
-        {pillars.map(({ Icon, title, text }) => (
+        {pillars.map(({ Icon, title, text, image }) => (
           <article key={title}>
-            <Icon size={29} />
-            <h3>{title}</h3>
-            <p>{text}</p>
+            <img
+              className="quality-pillar-photo"
+              src={img(image)}
+              alt={"Imagem ilustrativa: " + title.toLowerCase()}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="quality-pillar-copy">
+              <Icon size={24} />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
           </article>
         ))}
       </section>
@@ -122,10 +139,8 @@ export function Quality() {
             Conferir.
           </h2>
           <p>
-            Uma rotina organizada reúne observações da equipe, medições
-            previstas no plano de controle e documentos que conectam as etapas.
-            Um único indicador, isoladamente, não conta toda a história do
-            produto.
+            Observação, medições e registros se complementam no acompanhamento
+            do produto, da origem ao destino.
           </p>
           <div className="quality-small-points">
             <span>
@@ -168,6 +183,12 @@ export function Quality() {
               de origem, movimentação e destino.
             </p>
           </div>
+          <EditorialImage
+            image="quality-logistics"
+            alt="Imagem ilustrativa de caixas sendo carregadas em transporte refrigerado"
+            caption="A conservação acompanha o produto no caminho até o destino."
+            className="trace-photo"
+          />
           <div className="trace-flow">
             {[
               ["01", "Origem", "Fornecedor e recebimento"],
@@ -185,7 +206,7 @@ export function Quality() {
           <div className="trace-note">
             <ScanLine size={23} />
             <p>
-              <strong>Identificar não é o mesmo que consultar.</strong> O lote
+              <strong>Registros conectados à identificação.</strong> O lote
               ajuda a relacionar registros mantidos pela operação. Esta versão
               apresenta o conceito; ainda não oferece consulta de lotes reais.
             </p>
@@ -199,19 +220,29 @@ export function Quality() {
             O rótulo merece
             <br />a sua atenção.
           </h2>
+          <EditorialImage
+            image="quality-label"
+            alt="Imagem ilustrativa da conferência de uma embalagem de camarão com etiqueta sem dados comerciais"
+            className="label-photo"
+          />
           <p>
             Antes de armazenar ou preparar, confira a identificação e as
             orientações do produto. Condições de conservação e validade precisam
             ser lidas em conjunto.
           </p>
-          <ul className="checklist label-checklist">
-            {labelItems.map((item) => (
-              <li key={item}>
-                <Check size={17} />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <details className="content-disclosure label-disclosure">
+            <summary>
+              O que conferir na embalagem <ChevronDown size={18} />
+            </summary>
+            <ul className="checklist label-checklist">
+              {labelItems.map((item) => (
+                <li key={item}>
+                  <Check size={17} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </details>
           <a
             className="text-link"
             href="https://www.gov.br/anvisa/pt-br/assuntos/alimentos/rotulagem"

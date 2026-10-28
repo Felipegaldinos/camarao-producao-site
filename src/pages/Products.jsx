@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { productData } from "../data/content";
+import { productData, img } from "../data/content";
 import { productImages } from "../data/media";
 import { ProductCard, PageHero, CTA } from "../components";
 import { Eyebrow, Button } from "../components";
@@ -18,6 +18,7 @@ import {
   Snowflake,
   Utensils,
   ArrowUpRight,
+  ChevronDown,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -27,8 +28,10 @@ export function Products() {
     <>
       <PageHero
         tag="PRODUTOS"
-        title="Qualidade em cada apresentação."
-        description="Conheça as formas comerciais do camarão e descubra as possibilidades de cada uma."
+        title="Da produção, diferentes apresentações."
+        description="Conheça as apresentações do camarão após o beneficiamento e os pontos técnicos que orientam o fornecimento."
+        visualImage="products-banner"
+        imageAlt="Imagem ilustrativa de camarões inteiros sobre gelo em uma apresentação azul e branca"
       />
       <div className="container page-subnav">
         <a href="#catalogo">Catálogo</a>
@@ -86,16 +89,17 @@ export function Products() {
         <div className="container">
           <div className="section-heading">
             <div>
-              <Eyebrow>O PREPARO COMEÇA NA ESCOLHA</Eyebrow>
+              <Eyebrow>DA PRODUÇÃO AO FORNECIMENTO</Eyebrow>
               <h2>
-                O que vai sair
+                Cada destino,
                 <br />
-                da sua cozinha?
+                uma apresentação.
               </h2>
             </div>
             <p>
-              Explore algumas possibilidades de uso.
-              <br />A receita e o serviço orientam a escolha final.
+              Explore os perfis de fornecimento.
+              <br />
+              Classificação, limpeza e conservação orientam a escolha.
             </p>
           </div>
           <PreparationGuide />
@@ -115,40 +119,46 @@ export function Products() {
             Conheça os cuidados com o produto <ArrowUpRight size={17} />
           </Link>
         </div>
-        <div
-          className="table-scroll"
-          role="region"
-          aria-label="Comparativo das apresentações"
-          tabIndex={0}
-        >
-          <table className="comparison-table">
-            <caption>
-              Compare apresentação, possibilidades de uso e pontos de atenção.
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Apresentação</th>
-                <th scope="col">Possibilidades de preparo</th>
-                <th scope="col">O que considerar</th>
-              </tr>
-            </thead>
-            <tbody>
-              {productData.map((p) => (
-                <tr key={p.slug}>
-                  <th scope="row">
-                    <Link to={"/produtos/" + p.slug}>
-                      {p.name}
-                      <ArrowUpRight size={15} />
-                    </Link>
-                    <span>{productGuide[p.slug].title}</span>
-                  </th>
-                  <td>{productGuide[p.slug].preparation}</td>
-                  <td>{productGuide[p.slug].attention}</td>
+        <details className="content-disclosure">
+          <summary>
+            Ver o comparativo completo das apresentações{" "}
+            <ChevronDown size={18} />
+          </summary>
+          <div
+            className="table-scroll"
+            role="region"
+            aria-label="Comparativo das apresentações"
+            tabIndex={0}
+          >
+            <table className="comparison-table">
+              <caption>
+                Compare apresentação, possibilidades de uso e pontos de atenção.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Apresentação</th>
+                  <th scope="col">Possibilidades de preparo</th>
+                  <th scope="col">O que considerar</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+              </thead>
+              <tbody>
+                {productData.map((p) => (
+                  <tr key={p.slug}>
+                    <th scope="row">
+                      <Link to={"/produtos/" + p.slug}>
+                        {p.name}
+                        <ArrowUpRight size={15} />
+                      </Link>
+                      <span>{productGuide[p.slug].title}</span>
+                    </th>
+                    <td>{productGuide[p.slug].preparation}</td>
+                    <td>{productGuide[p.slug].attention}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
       </section>
       <section className="container product-understanding">
         <EditorialImage
@@ -196,23 +206,34 @@ export function Products() {
             [
               Package,
               "Embalagem e peso",
-              "Confirme o peso líquido, o formato da embalagem e a quantidade adequada à sua rotina.",
+              "Confirme peso líquido e quantidade por embalagem.",
+              "products-packaging",
             ],
             [
               Snowflake,
               "Conservação e preparo",
-              "As condições de armazenamento, validade e preparo devem seguir a rotulagem do produto.",
+              "Siga a conservação e o preparo indicados no rótulo.",
+              "products-coldchain",
             ],
             [
               Utensils,
               "Limpeza e apresentação",
-              "Confira casca, cauda e evisceração. Esses detalhes podem variar entre especificações.",
+              "Confira casca, cauda e o tipo de limpeza.",
+              "products-cleaning",
             ],
-          ].map(([Icon, title, text]) => (
-            <article key={title}>
-              <Icon size={28} />
-              <h3>{title}</h3>
-              <p>{text}</p>
+          ].map(([Icon, title, text, image]) => (
+            <article className="commerce-photo-card" key={title}>
+              <img
+                src={img(image)}
+                alt={"Imagem ilustrativa: " + title.toLowerCase()}
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <Icon size={24} />
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
             </article>
           ))}
         </div>

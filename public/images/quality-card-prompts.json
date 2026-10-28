@@ -1,0 +1,10 @@
+{
+  "tool": "ImageGen integrada",
+  "illustrative": true,
+  "prompts": {
+    "quality-water-card": "Original editorial landscape photograph, close composition of an aquaculture technician's gloved hand filling a clear sample bottle from shrimp pond water beside a small white sampling pier, subtle blue ocean palette, clean natural daylight, fictional scene, no text logos or watermark.",
+    "quality-hygiene-card": "Original editorial landscape photograph of a stainless steel hand washing and equipment hygiene station in a bright seafood processing facility, blue gloved hands washing a clean removable food-safe tray under flowing water, realistic details, white and blue palette, no text logos or watermark.",
+    "quality-batch-card": "Original editorial landscape photograph of a line of plain white sealed seafood cartons with small blank blue and white tags on a clean stainless steel dispatch table, one gloved hand checking a tag, warehouse softly blurred, no visible brand no words no numbers no watermark.",
+    "quality-temperature-card-v2": "Use case: photorealistic-natural. Original editorial landscape close-up photograph for a SHRIMP aquaculture website. A blue-gloved hand inserts a stainless steel digital temperature probe into a small WHITE tray containing ONLY small whole raw SHRIMP and crushed ice. Shrimp must be clearly recognizable: translucent gray curved shrimp bodies, shrimp heads and antennae. Bright clean seafood cold-room background softly blurred. White and ocean blue palette, realistic natural light. Absolutely NO FISH, no fish bodies, no fillets, no other seafood, no text or readable numbers, no logos or watermark. A single original full frame photograph."
+  }
+}

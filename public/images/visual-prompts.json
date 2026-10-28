@@ -1,0 +1,13 @@
+{
+  "tool": "ImageGen integrada",
+  "illustrative": true,
+  "prompts": {
+    "products-banner": "Wide landscape premium editorial food photograph of a shallow blue ceramic bowl of fresh whole raw Pacific white shrimp on crushed ice, a white linen napkin and a bright white background, ocean blue and white palette, dramatic clean side lighting, macro detail, no logo no text, completely new composition.",
+    "products-packaging": "Editorial close-up photograph of plain unbranded transparent shrimp packaging bags neatly arranged in a white insulated shipping box on a clean blue seafood packing counter. No labels or text, realistic frozen raw shrimp and light ice crystals, soft daylight.",
+    "products-coldchain": "Editorial documentary photograph of a clean seafood cold storage room with blue stackable food crates and a stainless steel trolley, cool white lighting, subtle cold atmosphere, perspective down the aisle, no people no logos no text.",
+    "products-cleaning": "Editorial food preparation photograph showing gloved hands carefully removing the shell of a single raw shrimp over a clean white cutting board, a blue bowl of cleaned shrimp beside it, white and ocean blue professional kitchen, no logos or text, clear realistic hands.",
+    "quality-banner": "Editorial documentary photograph of a quality control professional's blue gloved hands using a small magnifier to inspect fresh raw shrimp on a shallow white tray in a bright seafood laboratory, close composition, white and ocean blue palette, no text no logos.",
+    "quality-logistics": "Wide editorial documentary photograph of a small refrigerated delivery vehicle being loaded with clean plain blue insulated food boxes outside a bright white seafood facility, two workers in blue uniforms seen from side and back, coastal Brazil daylight, no logos no text.",
+    "quality-label": "Close editorial photograph of a blue-gloved hand holding a transparent frozen shrimp package with a plain blank white label and a second hand checking the package seal, clean pale blue countertop, simple composition with natural light, no readable text no logos."
+  }
+}

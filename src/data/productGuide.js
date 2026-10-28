@@ -29,32 +29,32 @@ export const productGuide = {
 
 export const preparations = [
   {
-    id: "grelha",
-    label: "Grelha e apresentação",
+    id: "inteiro",
+    label: "Comercialização do inteiro",
     product: "inteiro",
-    title: "O camarão como protagonista.",
-    text: "O inteiro valoriza a apresentação completa. A versão sem cabeça também pode ser uma opção, conforme a receita e o serviço.",
+    title: "Apresentação completa após a despesca.",
+    text: "O inteiro mantém cabeça e casca. Confirme a classificação, a unidade de peso, as condições de conservação e o destino comercial do lote.",
   },
   {
-    id: "massa",
-    label: "Massas e risotos",
+    id: "beneficiamento",
+    label: "Beneficiamento e limpeza",
     product: "descascado",
-    title: "Mais fluidez na sua cozinha.",
-    text: "O descascado é uma possibilidade para preparos que pedem praticidade. Confira a presença de cauda e a limpeza especificada.",
+    title: "Descascado, conforme a especificação.",
+    text: "A apresentação resulta das etapas de limpeza e beneficiamento. Verifique presença de cauda, evisceração, peso líquido e embalagem.",
   },
   {
     id: "versatil",
-    label: "Preparo versátil",
+    label: "Fornecimento com casca",
     product: "sem-cabeca",
-    title: "Uma escolha para diferentes receitas.",
-    text: "O sem cabeça combina diferentes possibilidades de preparo. Avalie o tamanho e se a casca fará parte da cocção.",
+    title: "Sem cabeça, com casca.",
+    text: "Uma apresentação comercial que combina retirada da cabeça e manutenção da casca. Consulte a classificação e a padronização informadas pelo fornecedor.",
   },
   {
     id: "profissional",
-    label: "Cozinha profissional",
+    label: "Fornecimento para empresas",
     product: "descascado",
-    title: "Planejamento antes do pedido.",
-    text: "Compare rendimento, porcionamento, frequência de uso e etapas de limpeza. A escolha final depende do processo da sua cozinha.",
+    title: "Volume, apresentação e regularidade.",
+    text: "Planeje o fornecimento a partir do volume, da embalagem, da classificação e da frequência de expedição. Confirme a disponibilidade com a operação comercial.",
   },
 ];
 
