@@ -63,7 +63,7 @@ export function Article() {
           loading="lazy"
           decoding="async"
           className="article-cover"
-          src={img(a[4])}
+          src={img(articleImages.detail[slug])}
           alt="Imagem ilustrativa do artigo"
         />
         {bodies[slug].map(([t, b]) => (
@@ -93,3 +93,4 @@ export function Article() {
     </>
   );
 }
+import { articleImages } from "../data/media";

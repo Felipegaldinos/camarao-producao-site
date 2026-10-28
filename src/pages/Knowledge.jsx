@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Search } from "lucide-react";
 import { articles } from "../data/content";
+import { articleImages } from "../data/media";
 import { ArticleCard, PageHero } from "../components";
 
 export function Knowledge() {
@@ -27,7 +28,11 @@ export function Knowledge() {
           {articles
             .filter((a) => a[1].toLowerCase().includes(q.toLowerCase()))
             .map((a) => (
-              <ArticleCard a={a} key={a[0]} />
+              <ArticleCard
+                a={a}
+                key={a[0]}
+                image={articleImages.listing[a[0]]}
+              />
             ))}
         </div>
         {!articles.some((a) =>

@@ -9,7 +9,7 @@ export function Info({ pageName }) {
   if (!d) return <NotFound />;
   return (
     <>
-      <PageHero tag={d[0]} title={d[1]} description={d[2]} image={d[5]} />
+      <PageHero tag={d[0]} title={d[1]} description={d[2]} />
       <section className="section container reading">
         <Eyebrow>{d[0]}</Eyebrow>
         <h2>{d[3]}</h2>

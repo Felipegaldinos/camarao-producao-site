@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import { productData, img } from "../data/content";
+import { productImages } from "../data/media";
 import { Eyebrow, Button, PageHero } from "../components";
 import { NotFound } from "./NotFound";
 export function Product() {
@@ -14,13 +15,7 @@ export function Product() {
         <img
           loading="lazy"
           decoding="async"
-          src={img(
-            slug === "inteiro"
-              ? "shrimp"
-              : slug === "sem-cabeca"
-                ? "headless"
-                : "peeled",
-          )}
+          src={img(productImages.detail[slug])}
           alt={p.name}
         />
         <div>

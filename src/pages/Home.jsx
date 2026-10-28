@@ -9,7 +9,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { stages, articles, productData, img } from "../data/content";
-import { stageMedia } from "../data/about";
+import { homeStageImages, productImages, articleImages } from "../data/media";
 import { Eyebrow, Button, ProductCard, ArticleCard, CTA } from "../components";
 
 export function Home() {
@@ -114,7 +114,7 @@ export function Home() {
               <Link to={"/producao/" + slug} className="stage-card" key={slug}>
                 <img
                   className="stage-card-photo"
-                  src={img(stageMedia[slug].primary)}
+                  src={img(homeStageImages[slug])}
                   alt={`Imagem ilustrativa de ${title.toLowerCase()}`}
                   loading="lazy"
                   decoding="async"
@@ -149,7 +149,11 @@ export function Home() {
         </div>
         <div className="product-grid">
           {productData.map((p) => (
-            <ProductCard key={p.slug} p={p} />
+            <ProductCard
+              key={p.slug}
+              p={p}
+              image={productImages.home[p.slug]}
+            />
           ))}
         </div>
       </section>
@@ -203,7 +207,7 @@ export function Home() {
         </div>
         <div className="article-grid">
           {articles.map((a) => (
-            <ArticleCard key={a[0]} a={a} />
+            <ArticleCard key={a[0]} a={a} image={articleImages.home[a[0]]} />
           ))}
         </div>
       </section>

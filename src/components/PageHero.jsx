@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-import { img } from "../data/content";
-export function PageHero({ tag, title, description, image }) {
+export function PageHero({ tag, title, description }) {
   return (
-    <section className={"page-hero " + (image ? "with-image" : "")}>
+    <section className="page-hero">
       <div className="container">
         <div className="breadcrumb">
           <Link to="/">Início</Link>
@@ -14,14 +13,6 @@ export function PageHero({ tag, title, description, image }) {
         <h1>{title}</h1>
         <p>{description}</p>
       </div>
-      {image && (
-        <img
-          loading="lazy"
-          decoding="async"
-          src={img(image)}
-          alt="Cena ilustrativa da cadeia de produção de camarão"
-        />
-      )}
     </section>
   );
 }

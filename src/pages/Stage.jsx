@@ -12,12 +12,7 @@ export function Stage() {
   const media = stageMedia[slug];
   return (
     <>
-      <PageHero
-        tag="CADEIA PRODUTIVA"
-        title={s[1]}
-        description={s[2]}
-        image={media.primary}
-      />
+      <PageHero tag="CADEIA PRODUTIVA" title={s[1]} description={s[2]} />
       <section className="container section reading">
         <p className="lead">{s[5]}</p>
         <EditorialImage

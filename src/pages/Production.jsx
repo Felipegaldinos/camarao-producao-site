@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { stages } from "../data/content";
 import { PageHero, CTA } from "../components";
 import { img } from "../data/content";
-import { stageMedia } from "../data/about";
+import { stageImageSuffix } from "../data/media";
 
 export function Production() {
   return (
@@ -12,7 +12,6 @@ export function Production() {
         tag="PRODUÇÃO"
         title="Uma jornada. Muitos cuidados."
         description="Explore as etapas que conectam a origem do camarão ao produto final."
-        image="farm"
       />
       <section className="container section">
         <div className="production-list">
@@ -20,7 +19,7 @@ export function Production() {
             <Link key={slug} to={"/producao/" + slug}>
               <img
                 className="production-thumb"
-                src={img(stageMedia[slug].primary)}
+                src={img("production-" + stageImageSuffix[slug])}
                 alt={`Imagem ilustrativa: ${title.toLowerCase()}`}
                 loading="lazy"
                 decoding="async"

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { productData } from "../data/content";
+import { productImages } from "../data/media";
 import { ProductCard, PageHero, CTA } from "../components";
 
 export function Products() {
@@ -31,7 +32,11 @@ export function Products() {
               (p) => filter === "Todos" || p.type === filter.toUpperCase(),
             )
             .map((p) => (
-              <ProductCard key={p.slug} p={p} />
+              <ProductCard
+                key={p.slug}
+                p={p}
+                image={productImages.listing[p.slug]}
+              />
             ))}
         </div>
         <p className="note">

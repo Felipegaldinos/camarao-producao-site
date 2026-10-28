@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "images:optimize": "node scripts/optimize-images.mjs",
+    "check:images": "node scripts/check-images.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -16,6 +18,7 @@
   },
   "devDependencies": {
     "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
     "vite": "^6.0.0"
   }
 }

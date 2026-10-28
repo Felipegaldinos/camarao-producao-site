@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { img } from "../data/content";
-export function ArticleCard({ a }) {
+export function ArticleCard({ a, image }) {
   return (
     <Link className="article-card" to={"/conhecimento/" + a[0]}>
       <div className="article-image">
         <img
           loading="lazy"
           decoding="async"
-          src={img(a[4])}
+          src={img(image)}
           alt="Imagem ilustrativa do tema do artigo"
         />
         <span>

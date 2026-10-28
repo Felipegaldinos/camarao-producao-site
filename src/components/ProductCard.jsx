@@ -1,20 +1,14 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { img } from "../data/content";
-export function ProductCard({ p }) {
+export function ProductCard({ p, image }) {
   return (
     <Link to={"/produtos/" + p.slug} className="product-card">
       <div className={"product-image " + p.slug}>
         <img
           loading="lazy"
           decoding="async"
-          src={img(
-            p.slug === "inteiro"
-              ? "shrimp"
-              : p.slug === "sem-cabeca"
-                ? "headless"
-                : "peeled",
-          )}
+          src={img(image)}
           alt={"Imagem ilustrativa de " + p.name.toLowerCase()}
         />
         <span>

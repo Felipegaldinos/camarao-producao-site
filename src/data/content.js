@@ -181,4 +181,4 @@ export const infoPages = {
     "lab",
   ],
 };
-export const img = (name) => `/images/${name}.png`;
+export const img = (name) => `/images/${name}.webp`;
