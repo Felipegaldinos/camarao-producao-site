@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import { Footer } from "./components";
 import { AppRoutes } from "./routes";
+import { useScrollReveal } from "./hooks/useScrollReveal";
 export default function App() {
   const location = useLocation();
   useEffect(() => {
@@ -23,10 +24,14 @@ export default function App() {
             " ",
           ));
   }, [location]);
+  useScrollReveal(location.pathname);
   return (
     <>
       <Header key={location.pathname} />
-      <main>
+      <main
+        className="site-main"
+        data-page={location.pathname.split("/")[1] || "inicio"}
+      >
         <AppRoutes />
       </main>
       <Footer />

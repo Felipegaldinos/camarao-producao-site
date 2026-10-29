@@ -13,10 +13,10 @@ export function Production() {
         title="Uma jornada. Muitos cuidados."
         description="Explore as etapas que conectam a origem do camarão ao produto final."
       />
-      <section className="container section">
+      <section className="container section production-path">
         <div className="production-list">
           {stages.map(([slug, title, sub, desc, Icon], i) => (
-            <Link key={slug} to={"/producao/" + slug}>
+            <Link key={slug} to={"/producao/" + slug} data-step={"0" + (i + 1)}>
               <img
                 className="production-thumb"
                 src={img("production-" + stageImageSuffix[slug])}

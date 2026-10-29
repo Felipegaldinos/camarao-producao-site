@@ -7,6 +7,8 @@ Este projeto é independente de `producao-de-camarao` e de `Camarao-do-norte`. O
 
 Site em React 19 com React Router, Vite e identidade visual em branco e azul.
 
+A camada visual em `src/styles/layout.css` alterna branco, azul claro e azul profundo, com curvas discretas e composições editoriais das fotografias. `ProductionExplorer` organiza as cinco etapas em abas acessíveis por clique e teclado. `useScrollReveal` aplica entradas suaves à rolagem e respeita a preferência por movimento reduzido. O carrossel inicial permanece exclusivamente fotográfico, e todas as 67 fotos mantêm usos distintos.
+
 ## Executar
 
 ```sh

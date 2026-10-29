@@ -7,11 +7,13 @@ import {
   ShieldCheck,
   BookOpen,
 } from "lucide-react";
-import { stages, articles, productData, img } from "../data/content";
-import { homeStageImages, productImages, articleImages } from "../data/media";
+import { articles, productData, img } from "../data/content";
+import { productImages, articleImages } from "../data/media";
 import { Eyebrow, Button, ProductCard, ArticleCard, CTA } from "../components";
 import { ImageCarousel } from "../components/ImageCarousel";
 import { heroSlides } from "../data/carousel";
+import { ProductionExplorer } from "../components/ProductionExplorer";
+import { WaveDivider } from "../components/WaveDivider";
 
 export function Home() {
   return (
@@ -35,32 +37,35 @@ export function Home() {
           ))}
         </div>
       </div>
-      <section className="section container intro">
-        <div>
-          <Eyebrow>CONHEÇA A ORIGEM AZUL</Eyebrow>
-          <h2>
-            Mais do que produzir.
-            <br />
-            <span>Entender cada etapa.</span>
-          </h2>
-        </div>
-        <div>
-          <p>
-            O camarão tem uma história que começa muito antes de chegar à mesa.
-            Ela envolve ciência, pessoas, água e um cuidado que acompanha todo o
-            caminho.
-          </p>
-          <p>
-            Reunimos essa jornada em um só lugar. Um espaço para conhecer a
-            produção, explorar produtos e se aproximar do universo da
-            carcinicultura.
-          </p>
-          <Link className="text-link" to="/sobre">
-            Conheça essa proposta <ArrowUpRight size={17} />
-          </Link>
+      <section className="section intro-band">
+        <div className="container intro">
+          <div>
+            <Eyebrow>CONHEÇA A ORIGEM AZUL</Eyebrow>
+            <h2>
+              Mais do que produzir.
+              <br />
+              <span>Entender cada etapa.</span>
+            </h2>
+          </div>
+          <div>
+            <p>
+              O camarão tem uma história que começa muito antes de chegar à
+              mesa. Ela envolve ciência, pessoas, água e um cuidado que
+              acompanha todo o caminho.
+            </p>
+            <p>
+              Reunimos essa jornada em um só lugar. Um espaço para conhecer a
+              produção, explorar produtos e se aproximar do universo da
+              carcinicultura.
+            </p>
+            <Link className="text-link" to="/sobre">
+              Conheça essa proposta <ArrowUpRight size={17} />
+            </Link>
+          </div>
         </div>
       </section>
-      <section className="section pale">
+      <section className="section home-production">
+        <WaveDivider position="top" tone="mist" />
         <div className="container">
           <div className="section-heading">
             <div>
@@ -82,29 +87,9 @@ export function Home() {
               </Link>
             </div>
           </div>
-          <div className="stage-grid">
-            {stages.map(([slug, title, sub, desc, Icon], i) => (
-              <Link to={"/producao/" + slug} className="stage-card" key={slug}>
-                <img
-                  className="stage-card-photo"
-                  src={img(homeStageImages[slug])}
-                  alt={`Imagem ilustrativa de ${title.toLowerCase()}`}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="stage-top">
-                  <Icon size={29} />
-                  <span>0{i + 1}</span>
-                </div>
-                <h3>{title}</h3>
-                <p>{desc}</p>
-                <span className="circle-arrow">
-                  <ArrowUpRight size={18} />
-                </span>
-              </Link>
-            ))}
-          </div>
+          <ProductionExplorer />
         </div>
+        <WaveDivider />
       </section>
       <section className="section container product-section">
         <div className="section-heading">
@@ -168,20 +153,22 @@ export function Home() {
           </Button>
         </div>
       </section>
-      <section className="section container">
-        <div className="section-heading">
-          <div>
-            <Eyebrow>CONHECIMENTO QUE CIRCULA</Eyebrow>
-            <h2>Para ir mais fundo.</h2>
+      <section className="section knowledge-band">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <Eyebrow>CONHECIMENTO QUE CIRCULA</Eyebrow>
+              <h2>Para ir mais fundo.</h2>
+            </div>
+            <Link to="/conhecimento" className="text-link">
+              Todos os conteúdos <ArrowUpRight size={17} />
+            </Link>
           </div>
-          <Link to="/conhecimento" className="text-link">
-            Todos os conteúdos <ArrowUpRight size={17} />
-          </Link>
-        </div>
-        <div className="article-grid">
-          {articles.map((a) => (
-            <ArticleCard key={a[0]} a={a} image={articleImages.home[a[0]]} />
-          ))}
+          <div className="article-grid">
+            {articles.map((a) => (
+              <ArticleCard key={a[0]} a={a} image={articleImages.home[a[0]]} />
+            ))}
+          </div>
         </div>
       </section>
       <CTA />
