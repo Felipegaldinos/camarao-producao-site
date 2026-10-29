@@ -1,5 +1,10 @@
 # Origem Azul
 
+Nome do projeto: `origemazul-camarao`.
+Pasta local: `C:\SITES AGENCIA ESTALO\origemazul-camarao`.
+
+Este projeto é independente de `producao-de-camarao` e de `Camarao-do-norte`. Os arquivos temporários e de publicação devem ficar em `outputs/` deste repositório, nunca nas pastas desses outros projetos. O remote do GitHub deve corresponder exclusivamente a `origemazul-camarao`.
+
 Site em React 19 com React Router, Vite e identidade visual em branco e azul.
 
 ## Executar
