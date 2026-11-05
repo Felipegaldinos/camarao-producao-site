@@ -55,7 +55,7 @@ const labelItems = [
 export function Quality() {
   return (
     <>
-      <PageHero
+      <PageHero dark
         tag="QUALIDADE E RASTREABILIDADE"
         title="Qualidade é cuidado que continua."
         description="Da origem ao recebimento, conheça os controles e as informações que ajudam a acompanhar o caminho do camarão."
@@ -101,7 +101,7 @@ export function Quality() {
           </article>
         ))}
       </section>
-      <section className="section pale" id="etapas">
+      <section className="section pale section-ocean" id="etapas">
         <div className="container">
           <div className="section-heading">
             <div>

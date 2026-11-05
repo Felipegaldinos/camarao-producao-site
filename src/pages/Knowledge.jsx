@@ -9,7 +9,7 @@ export function Knowledge() {
   const [q, setQ] = useState("");
   return (
     <>
-      <PageHero
+      <PageHero dark
         tag="CONHECIMENTO"
         title="Conhecer é o primeiro passo."
         description="Guias e conteúdos introdutórios para explorar o universo da carcinicultura."

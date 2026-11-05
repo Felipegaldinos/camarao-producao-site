@@ -1,3 +1,28 @@
+/* Dark backgrounds limited to the sections selected by the site owner. */
+.site-main .section-ocean.page-hero,
+.site-main .section-ocean.pale {
+  background: var(--ocean-deep);
+  color: #fff;
+}
+.section-ocean h1,
+.section-ocean h2 { color: #fff; }
+.section-ocean.page-hero p,
+.section-ocean .section-heading p,
+.section-ocean .purchasing-grid p,
+.section-ocean > .container > .note { color: #c5deeb; }
+.section-ocean .eyebrow,
+.section-ocean .breadcrumb { color: #a4dcec; }
+.section-ocean .breadcrumb a:hover { color: #fff; }
+.section-ocean .preparation-result,
+.section-ocean .journey-panel { color: #173e56; }
+.section-ocean .purchasing-grid .checklist li {
+  color: #e1eff7;
+  border-color: #ffffff30;
+}
+.section-ocean .purchasing-grid .checklist svg { color: #92d9ec; }
+.section-ocean .purchasing-grid .button { background: #fff; color: #064b73; }
+.section-ocean .purchasing-grid .button:hover { background: #dceff7; }
+
 /* Shared visual rhythm: paper, light water blue and deep ocean blue. */
 :root {
   --water-mist: #edf7fb;

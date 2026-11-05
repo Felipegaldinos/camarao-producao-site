@@ -8,7 +8,7 @@ import { stageImageSuffix } from "../data/media";
 export function Production() {
   return (
     <>
-      <PageHero
+      <PageHero dark
         tag="PRODUÇÃO"
         title="Uma jornada. Muitos cuidados."
         description="Explore as etapas que conectam a origem do camarão ao produto final."

@@ -26,7 +26,7 @@ export function Products() {
   const [filter, setFilter] = useState("Todos");
   return (
     <>
-      <PageHero
+      <PageHero dark
         tag="PRODUTOS"
         title="Da produção, diferentes apresentações."
         description="Conheça as apresentações do camarão após o beneficiamento e os pontos técnicos que orientam o fornecimento."
@@ -85,7 +85,7 @@ export function Products() {
           condições comerciais serão preenchidas com os dados da empresa.
         </p>
       </section>
-      <section className="pale section" id="escolha">
+      <section className="pale section section-ocean" id="escolha">
         <div className="container">
           <div className="section-heading">
             <div>
@@ -238,7 +238,7 @@ export function Products() {
           ))}
         </div>
       </section>
-      <section className="pale section">
+      <section className="pale section section-ocean">
         <div className="container purchasing-grid">
           <div>
             <Eyebrow>PARA UM PEDIDO BEM DEFINIDO</Eyebrow>

@@ -32,7 +32,7 @@ const principles = [
 export function About() {
   return (
     <>
-      <PageHero
+      <PageHero dark
         tag="SOBRE NÓS"
         title="Uma origem feita de pessoas e cuidado."
         description="Conheça a proposta, os espaços e as funções que conectam o cultivo à qualidade do produto."

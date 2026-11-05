@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { img } from "../data/content";
 
-export function PageHero({ tag, title, description, visualImage, imageAlt }) {
+export function PageHero({ tag, title, description, visualImage, imageAlt, dark = false }) {
   return (
-    <section className={"page-hero " + (visualImage ? "visual-hero" : "")}>
+    <section className={"page-hero " + (visualImage ? "visual-hero " : "") + (dark ? "section-ocean" : "")}>
       <div className="container">
         <div className="breadcrumb">
           <Link to="/">Início</Link>
