@@ -485,7 +485,7 @@
 [data-page="sobre"] .team-card:nth-child(even) {
   padding-top: 28px;
 }
-[data-page="produtos"] #escolha {
+[data-page="produtos"] #escolha:not(.section-ocean) {
   background: linear-gradient(125deg, #dceff7, #eff8fc);
 }
 [data-page="produtos"] .product-image {
@@ -494,7 +494,7 @@
 [data-page="produtos"] .product-understanding .editorial-image img {
   border-radius: 8px 70px 8px 8px;
 }
-[data-page="qualidade"] #etapas {
+[data-page="qualidade"] #etapas:not(.section-ocean) {
   background: linear-gradient(125deg, #e5f3fa, #d9edf6);
 }
 [data-page="qualidade"] .quality-pillar-photo {
