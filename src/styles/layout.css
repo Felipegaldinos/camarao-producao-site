@@ -1,6 +1,6 @@
 /* Dark backgrounds limited to the sections selected by the site owner. */
-.site-main .section-ocean.page-hero,
-.site-main .section-ocean.pale {
+.site-main[data-page] .section-ocean.page-hero,
+.site-main[data-page] .section-ocean.pale {
   background: var(--ocean-deep);
   color: #fff;
 }
