@@ -2244,13 +2244,13 @@ section[id] {
   padding-bottom: 60px;
 }
 .visual-hero > .container {
-  padding-right: 46%;
+  padding-right: 0;
   position: relative;
   z-index: 1;
 }
 .visual-hero h1 {
   font-size: 43px;
-  max-width: 600px;
+  max-width: min(340px, 52%);
 }
 .visual-hero .page-hero-photo {
   position: absolute;
@@ -2266,7 +2266,7 @@ section[id] {
 }
 .visual-hero p {
   font-size: 14px;
-  max-width: 490px;
+  max-width: min(340px, 52%);
 }
 .content-disclosure {
   padding: 0;
@@ -2369,7 +2369,7 @@ section[id] {
     min-height: 390px;
   }
   .visual-hero > .container {
-    padding-right: 44%;
+    padding-right: 0;
   }
   .visual-hero .page-hero-photo {
     width: 42%;
@@ -2397,6 +2397,10 @@ section[id] {
   }
   .visual-hero h1 {
     font-size: 36px;
+  }
+  .visual-hero h1,
+  .visual-hero p {
+    max-width: 100%;
   }
   .visual-hero .page-hero-photo {
     position: static;
