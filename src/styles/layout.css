@@ -31,6 +31,66 @@
   --ocean-deep: #063f63;
 }
 
+/* Color-only refinement: shared blues with subtle variation between pages. */
+.site-main {
+  --ocean-glow: #0c5276;
+  --page-mist: #edf7fb;
+}
+.site-main[data-page="sobre"] {
+  --ocean-glow: #175d7b;
+  --page-mist: #eaf6fa;
+}
+.site-main[data-page="producao"] {
+  --ocean-glow: #07577b;
+  --page-mist: #e8f4fa;
+}
+.site-main[data-page="produtos"] {
+  --ocean-glow: #105c81;
+  --page-mist: #f4fafd;
+}
+.site-main[data-page="qualidade"] {
+  --ocean-glow: #0a496c;
+  --page-mist: #eaf3f9;
+}
+.site-main[data-page="conhecimento"] {
+  --ocean-glow: #125878;
+  --page-mist: #eef8fc;
+}
+.site-main[data-page] .section-ocean.page-hero,
+.site-main[data-page] .section-ocean.pale {
+  background: radial-gradient(ellipse at 90% 8%, var(--ocean-glow), transparent 68%), var(--ocean-deep);
+}
+.site-main[data-page] .pale:not(.section-ocean) {
+  background: linear-gradient(120deg, var(--page-mist), #f8fcfe);
+}
+.site-main .page-subnav a { color: #286a8a; }
+.site-main .page-subnav a:hover,
+.site-main .page-subnav a:focus-visible { color: #086da9; }
+.site-main .button {
+  transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+.site-main .button:hover,
+.site-main .button:focus-visible { box-shadow: 0 0 0 3px #5fc5db35; }
+.site-main .facility-card,
+.site-main .quality-pillars article,
+.site-main .commerce-photo-card { border-color: #c9e2ee; }
+.site-main .facility-card:hover,
+.site-main .quality-pillars article:hover,
+.site-main .commerce-photo-card:hover { border-color: #72b9d1; }
+.site-main .product-card:hover .product-bottom > svg,
+.site-main .product-card:focus-visible .product-bottom > svg {
+  background-color: #dceff7;
+  color: #07547e;
+}
+.site-main .section-ocean .eyebrow > span { background-color: #91d7e9; }
+.site-main .section-ocean .journey-choices button[aria-pressed="true"],
+.site-main .section-ocean .choice-buttons button[aria-pressed="true"] {
+  background: #0875ae;
+  border-color: #73bfd9;
+}
+.site-main .section-ocean .journey-choices button:hover,
+.site-main .section-ocean .choice-buttons button:hover { border-color: #5fc5db; }
+
 .site-main {
   overflow: clip;
 }
